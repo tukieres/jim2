@@ -1,8 +1,6 @@
 ﻿using JoJosInventory.Classes;
 using System.Data;
 using JoJosInventory.Data;
-using JoJosInventory.Froms;
-using Microsoft.VisualBasic;
 
 namespace JoJosInventory.Controls
 {
@@ -74,14 +72,14 @@ namespace JoJosInventory.Controls
         {
             if (expanded)
             {
-                pnSearch.Height = 38;
+                pnSearch.Height = 49;
                 expanded = false;
                 btnExpand.ImageIndex = 1;
 
             }
             else
             {
-                pnSearch.Height = 144;
+                pnSearch.Height = 194;
                 expanded = true;
                 btnExpand.ImageIndex = 0;
             }
@@ -132,7 +130,7 @@ namespace JoJosInventory.Controls
             //Edit buttons
             if (e.ColumnIndex == dgv.Columns["Edit"].Index && e.RowIndex >= 0)
             {
-                PrintedProductsEdit ppe = new PrintedProductsEdit();
+                PrintedProductsEdit ppe = new PrintedProductsEdit(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["Id"].Value));
                 ppe.Dock = DockStyle.Fill;
                 this.Parent.Controls.Add(ppe);
                 this.Parent.Controls.Remove(this);
@@ -168,7 +166,7 @@ namespace JoJosInventory.Controls
             }
         }
 
-        private void searchFilters()
+        public void searchFilters()
         {
             this.Cursor = Cursors.WaitCursor;
             bc = Printed.PrintedProductsSearch("", "", "", "");
@@ -229,7 +227,7 @@ namespace JoJosInventory.Controls
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var resp = MessageBox.Show("This operation cannot be reversed, do you wish to delete the selected materials?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var resp = MessageBox.Show("This operation cannot be reversed, do you wish to delete the selected printed producs?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (resp.ToString() == "Yes")
             {
@@ -248,7 +246,7 @@ namespace JoJosInventory.Controls
                     }
                 }
                 string formattedIds = "(" + string.Join(",", markedIds) + ")";
-                Base bs = Printed.BaseMaterialDelete(formattedIds);
+                Base bs = Printed.PrintedProductsDelete(formattedIds);
                 if (bs.error == false) { searchFilters(); } else { MessageBox.Show(bs.message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
                 this.Cursor = Cursors.Default;

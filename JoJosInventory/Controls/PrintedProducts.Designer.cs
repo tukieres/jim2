@@ -60,10 +60,12 @@
             // 
             dgv.AllowUserToOrderColumns = true;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Location = new Point(3, 47);
+            dgv.Location = new Point(3, 61);
+            dgv.Margin = new Padding(3, 4, 3, 4);
             dgv.Name = "dgv";
+            dgv.RowHeadersWidth = 51;
             dgv.RowTemplate.Height = 25;
-            dgv.Size = new Size(583, 100);
+            dgv.Size = new Size(666, 133);
             dgv.TabIndex = 10;
             dgv.CellClick += dgv_CellClick;
             dgv.CellValueChanged += dgv_CellValueChanged;
@@ -78,8 +80,9 @@
             pnHeader.Controls.Add(btnDelete);
             pnHeader.Dock = DockStyle.Top;
             pnHeader.Location = new Point(0, 0);
+            pnHeader.Margin = new Padding(3, 4, 3, 4);
             pnHeader.Name = "pnHeader";
-            pnHeader.Size = new Size(620, 41);
+            pnHeader.Size = new Size(709, 55);
             pnHeader.TabIndex = 2;
             // 
             // label1
@@ -87,9 +90,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(14, 8);
+            label1.Location = new Point(16, 11);
             label1.Name = "label1";
-            label1.Size = new Size(190, 25);
+            label1.Size = new Size(242, 32);
             label1.TabIndex = 3;
             label1.Text = "Printed Product List";
             // 
@@ -101,9 +104,10 @@
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.ForeColor = Color.White;
             btnAdd.ImageIndex = 1;
-            btnAdd.Location = new Point(465, 9);
+            btnAdd.Location = new Point(514, 12);
+            btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(68, 27);
+            btnAdd.Size = new Size(95, 43);
             btnAdd.TabIndex = 0;
             btnAdd.Text = "&Add New";
             btnAdd.UseVisualStyleBackColor = false;
@@ -118,9 +122,10 @@
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.ForeColor = Color.White;
             btnDelete.ImageIndex = 1;
-            btnDelete.Location = new Point(539, 9);
+            btnDelete.Location = new Point(611, 12);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(61, 27);
+            btnDelete.Size = new Size(74, 43);
             btnDelete.TabIndex = 1;
             btnDelete.Text = "&Delete";
             btnDelete.UseVisualStyleBackColor = false;
@@ -150,26 +155,28 @@
             pnSearch.Controls.Add(label2);
             pnSearch.Controls.Add(btnExpand);
             pnSearch.Dock = DockStyle.Top;
-            pnSearch.Location = new Point(3, 3);
+            pnSearch.Location = new Point(3, 4);
+            pnSearch.Margin = new Padding(3, 4, 3, 4);
             pnSearch.Name = "pnSearch";
-            pnSearch.Size = new Size(591, 38);
+            pnSearch.Size = new Size(675, 49);
             pnSearch.TabIndex = 3;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(8, 89);
+            label6.Location = new Point(9, 119);
             label6.Name = "label6";
-            label6.Size = new Size(67, 15);
+            label6.Size = new Size(85, 20);
             label6.TabIndex = 12;
             label6.Text = "Description";
             // 
             // txtDescription
             // 
             txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtDescription.Location = new Point(7, 108);
+            txtDescription.Location = new Point(8, 144);
+            txtDescription.Margin = new Padding(3, 4, 3, 4);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(442, 23);
+            txtDescription.Size = new Size(488, 27);
             txtDescription.TabIndex = 6;
             txtDescription.TextChanged += cmbCategory_TextChanged;
             // 
@@ -178,9 +185,10 @@
             cmbCity.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbCity.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbCity.FormattingEnabled = true;
-            cmbCity.Location = new Point(192, 58);
+            cmbCity.Location = new Point(219, 77);
+            cmbCity.Margin = new Padding(3, 4, 3, 4);
             cmbCity.Name = "cmbCity";
-            cmbCity.Size = new Size(164, 23);
+            cmbCity.Size = new Size(187, 28);
             cmbCity.TabIndex = 4;
             cmbCity.TextChanged += cmbCategory_TextChanged;
             // 
@@ -189,9 +197,10 @@
             cmbSku.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbSku.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbSku.FormattingEnabled = true;
-            cmbSku.Location = new Point(379, 57);
+            cmbSku.Location = new Point(433, 76);
+            cmbSku.Margin = new Padding(3, 4, 3, 4);
             cmbSku.Name = "cmbSku";
-            cmbSku.Size = new Size(164, 23);
+            cmbSku.Size = new Size(187, 28);
             cmbSku.TabIndex = 5;
             cmbSku.TextChanged += cmbCategory_TextChanged;
             // 
@@ -203,9 +212,10 @@
             btnClear.FlatStyle = FlatStyle.Flat;
             btnClear.ForeColor = Color.White;
             btnClear.ImageIndex = 1;
-            btnClear.Location = new Point(522, 104);
+            btnClear.Location = new Point(592, 128);
+            btnClear.Margin = new Padding(3, 4, 3, 4);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(61, 27);
+            btnClear.Size = new Size(70, 43);
             btnClear.TabIndex = 8;
             btnClear.Text = "&Clear";
             btnClear.UseVisualStyleBackColor = false;
@@ -219,9 +229,10 @@
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.ForeColor = Color.White;
             btnSearch.ImageIndex = 1;
-            btnSearch.Location = new Point(455, 104);
+            btnSearch.Location = new Point(510, 128);
+            btnSearch.Margin = new Padding(3, 4, 3, 4);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(61, 27);
+            btnSearch.Size = new Size(74, 43);
             btnSearch.TabIndex = 7;
             btnSearch.Text = "&Search";
             btnSearch.UseVisualStyleBackColor = false;
@@ -231,27 +242,27 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(379, 39);
+            label5.Location = new Point(433, 52);
             label5.Name = "label5";
-            label5.Size = new Size(28, 15);
+            label5.Size = new Size(36, 20);
             label5.TabIndex = 7;
             label5.Text = "SKU";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(192, 39);
+            label4.Location = new Point(219, 52);
             label4.Name = "label4";
-            label4.Size = new Size(28, 15);
+            label4.Size = new Size(34, 20);
             label4.TabIndex = 6;
             label4.Text = "City";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(7, 39);
+            label3.Location = new Point(8, 52);
             label3.Name = "label3";
-            label3.Size = new Size(55, 15);
+            label3.Size = new Size(69, 20);
             label3.TabIndex = 5;
             label3.Text = "Category";
             // 
@@ -260,9 +271,10 @@
             cmbCategory.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbCategory.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(7, 58);
+            cmbCategory.Location = new Point(8, 77);
+            cmbCategory.Margin = new Padding(3, 4, 3, 4);
             cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(164, 23);
+            cmbCategory.Size = new Size(187, 28);
             cmbCategory.TabIndex = 3;
             cmbCategory.TextChanged += cmbCategory_TextChanged;
             // 
@@ -270,9 +282,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(3, 8);
+            label2.Location = new Point(3, 11);
             label2.Name = "label2";
-            label2.Size = new Size(61, 21);
+            label2.Size = new Size(75, 28);
             label2.TabIndex = 1;
             label2.Text = "Search";
             // 
@@ -282,9 +294,10 @@
             btnExpand.FlatStyle = FlatStyle.Flat;
             btnExpand.ImageIndex = 1;
             btnExpand.ImageList = imageList;
-            btnExpand.Location = new Point(545, 6);
+            btnExpand.Location = new Point(623, 11);
+            btnExpand.Margin = new Padding(3, 4, 3, 4);
             btnExpand.Name = "btnExpand";
-            btnExpand.Size = new Size(38, 23);
+            btnExpand.Size = new Size(43, 31);
             btnExpand.TabIndex = 2;
             btnExpand.UseVisualStyleBackColor = true;
             btnExpand.Click += btnExpand_Click;
@@ -295,21 +308,23 @@
             FlPanel.BackColor = Color.Gray;
             FlPanel.Controls.Add(pnSearch);
             FlPanel.Controls.Add(dgv);
-            FlPanel.Location = new Point(14, 47);
+            FlPanel.Location = new Point(16, 63);
+            FlPanel.Margin = new Padding(3, 4, 3, 4);
             FlPanel.Name = "FlPanel";
-            FlPanel.Size = new Size(590, 284);
+            FlPanel.Size = new Size(674, 379);
             FlPanel.TabIndex = 4;
             FlPanel.SizeChanged += FlPanel_SizeChanged;
             // 
             // PrintedProducts
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             Controls.Add(FlPanel);
             Controls.Add(pnHeader);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PrintedProducts";
-            Size = new Size(620, 344);
+            Size = new Size(709, 459);
             Load += PrintedProducts_Load;
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             pnHeader.ResumeLayout(false);

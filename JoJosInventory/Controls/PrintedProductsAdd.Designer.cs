@@ -28,37 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             pnHeader = new Panel();
             lblBack = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            label1 = new Label();
             btnAdd = new Button();
-            button1 = new Button();
+            btnAddEdit = new Button();
+            label1 = new Label();
             pnMain = new Panel();
             label9 = new Label();
-            textBox2 = new TextBox();
+            txtQuantity = new TextBox();
             label8 = new Label();
-            textBox1 = new TextBox();
+            txtShortDescription = new TextBox();
             label6 = new Label();
             txtDescription = new TextBox();
             cmbCity = new ComboBox();
             cmbSku = new ComboBox();
-            btnClear = new Button();
-            btnSearch = new Button();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             cmbCategory = new ComboBox();
-            btnExpand = new Button();
             panel1 = new Panel();
             label11 = new Label();
-            button4 = new Button();
-            button5 = new Button();
             label14 = new Label();
-            button6 = new Button();
-            timerCLose = new System.Windows.Forms.Timer(components);
             pnHeader.SuspendLayout();
             pnMain.SuspendLayout();
             panel1.SuspendLayout();
@@ -68,15 +58,14 @@
             // 
             pnHeader.BackColor = Color.Gray;
             pnHeader.Controls.Add(lblBack);
-            pnHeader.Controls.Add(button2);
-            pnHeader.Controls.Add(button3);
-            pnHeader.Controls.Add(label1);
             pnHeader.Controls.Add(btnAdd);
-            pnHeader.Controls.Add(button1);
+            pnHeader.Controls.Add(btnAddEdit);
+            pnHeader.Controls.Add(label1);
             pnHeader.Dock = DockStyle.Top;
             pnHeader.Location = new Point(0, 0);
+            pnHeader.Margin = new Padding(3, 4, 3, 4);
             pnHeader.Name = "pnHeader";
-            pnHeader.Size = new Size(637, 41);
+            pnHeader.Size = new Size(927, 55);
             pnHeader.TabIndex = 4;
             // 
             // lblBack
@@ -84,162 +73,143 @@
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblBack.ForeColor = Color.Aqua;
-            lblBack.Location = new Point(252, 18);
+            lblBack.Location = new Point(318, 24);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(174, 15);
+            lblBack.Size = new Size(216, 20);
             lblBack.TabIndex = 0;
             lblBack.Text = "<-- back to Printed Product List";
             lblBack.Click += label_Click;
             lblBack.MouseEnter += lblBack_MouseEnter;
             lblBack.MouseLeave += lblBack_MouseLeave;
             // 
-            // button2
+            // btnAdd
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.AutoSize = true;
-            button2.BackColor = Color.Navy;
-            button2.Enabled = false;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.ImageIndex = 1;
-            button2.Location = new Point(457, 11);
-            button2.Name = "button2";
-            button2.Size = new Size(68, 27);
-            button2.TabIndex = 1;
-            button2.Text = "&Add New";
-            button2.UseVisualStyleBackColor = false;
+            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAdd.AutoSize = true;
+            btnAdd.BackColor = Color.Navy;
+            btnAdd.Enabled = false;
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.ForeColor = Color.White;
+            btnAdd.ImageIndex = 1;
+            btnAdd.Location = new Point(681, 15);
+            btnAdd.Margin = new Padding(3, 4, 3, 4);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(95, 43);
+            btnAdd.TabIndex = 1;
+            btnAdd.Tag = "0";
+            btnAdd.Text = "&Add New";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
-            // button3
+            // btnAddEdit
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button3.AutoSize = true;
-            button3.BackColor = Color.Navy;
-            button3.Enabled = false;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.White;
-            button3.ImageIndex = 1;
-            button3.Location = new Point(532, 11);
-            button3.Name = "button3";
-            button3.Size = new Size(87, 27);
-            button3.TabIndex = 2;
-            button3.Text = "Add &and Edit";
-            button3.UseVisualStyleBackColor = false;
+            btnAddEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAddEdit.AutoSize = true;
+            btnAddEdit.BackColor = Color.Navy;
+            btnAddEdit.Enabled = false;
+            btnAddEdit.FlatStyle = FlatStyle.Flat;
+            btnAddEdit.ForeColor = Color.White;
+            btnAddEdit.ImageIndex = 1;
+            btnAddEdit.Location = new Point(783, 15);
+            btnAddEdit.Margin = new Padding(3, 4, 3, 4);
+            btnAddEdit.Name = "btnAddEdit";
+            btnAddEdit.Size = new Size(123, 43);
+            btnAddEdit.TabIndex = 2;
+            btnAddEdit.Tag = "1";
+            btnAddEdit.Text = "Add and &Edit";
+            btnAddEdit.UseVisualStyleBackColor = false;
+            btnAddEdit.Click += btnAdd_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(14, 8);
+            label1.Location = new Point(16, 11);
             label1.Name = "label1";
-            label1.Size = new Size(232, 25);
+            label1.Size = new Size(296, 32);
             label1.TabIndex = 3;
             label1.Text = "Add Printed Product List";
-            // 
-            // btnAdd
-            // 
-            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAdd.AutoSize = true;
-            btnAdd.BackColor = Color.Navy;
-            btnAdd.FlatStyle = FlatStyle.Flat;
-            btnAdd.ForeColor = Color.White;
-            btnAdd.ImageIndex = 1;
-            btnAdd.Location = new Point(902, 9);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(68, 27);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "&Add New";
-            btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.AutoSize = true;
-            button1.BackColor = Color.Red;
-            button1.Enabled = false;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.ImageIndex = 1;
-            button1.Location = new Point(976, 9);
-            button1.Name = "button1";
-            button1.Size = new Size(61, 27);
-            button1.TabIndex = 1;
-            button1.Text = "&Delete";
-            button1.UseVisualStyleBackColor = false;
             // 
             // pnMain
             // 
             pnMain.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             pnMain.BackColor = Color.White;
             pnMain.Controls.Add(label9);
-            pnMain.Controls.Add(textBox2);
+            pnMain.Controls.Add(txtQuantity);
             pnMain.Controls.Add(label8);
-            pnMain.Controls.Add(textBox1);
+            pnMain.Controls.Add(txtShortDescription);
             pnMain.Controls.Add(label6);
             pnMain.Controls.Add(txtDescription);
             pnMain.Controls.Add(cmbCity);
             pnMain.Controls.Add(cmbSku);
-            pnMain.Controls.Add(btnClear);
-            pnMain.Controls.Add(btnSearch);
             pnMain.Controls.Add(label5);
             pnMain.Controls.Add(label4);
             pnMain.Controls.Add(label3);
             pnMain.Controls.Add(cmbCategory);
-            pnMain.Controls.Add(btnExpand);
-            pnMain.Location = new Point(14, 47);
+            pnMain.Location = new Point(16, 63);
+            pnMain.Margin = new Padding(3, 4, 3, 4);
             pnMain.Name = "pnMain";
-            pnMain.Size = new Size(605, 179);
+            pnMain.Size = new Size(890, 239);
             pnMain.TabIndex = 5;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(187, 67);
+            label9.Location = new Point(214, 89);
             label9.Name = "label9";
-            label9.Size = new Size(61, 15);
+            label9.Size = new Size(75, 20);
             label9.TabIndex = 16;
             label9.Text = "Quantity *";
             // 
-            // textBox2
+            // txtQuantity
             // 
-            textBox2.Location = new Point(187, 86);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(232, 23);
-            textBox2.TabIndex = 7;
+            txtQuantity.Location = new Point(214, 115);
+            txtQuantity.Margin = new Padding(3, 4, 3, 4);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(265, 27);
+            txtQuantity.TabIndex = 7;
+            txtQuantity.TextAlign = HorizontalAlignment.Right;
+            txtQuantity.TextChanged += cmbCategory_TextChanged;
+            txtQuantity.KeyPress += txtQuantity_KeyPress;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(187, 10);
+            label8.Location = new Point(214, 13);
             label8.Name = "label8";
-            label8.Size = new Size(98, 15);
+            label8.Size = new Size(124, 20);
             label8.TabIndex = 14;
             label8.Text = "Short Description";
             // 
-            // textBox1
+            // txtShortDescription
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(187, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(232, 23);
-            textBox1.TabIndex = 4;
+            txtShortDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtShortDescription.Location = new Point(214, 39);
+            txtShortDescription.Margin = new Padding(3, 4, 3, 4);
+            txtShortDescription.Name = "txtShortDescription";
+            txtShortDescription.Size = new Size(464, 27);
+            txtShortDescription.TabIndex = 4;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(11, 125);
+            label6.Location = new Point(13, 167);
             label6.Name = "label6";
-            label6.Size = new Size(75, 15);
+            label6.Size = new Size(95, 20);
             label6.TabIndex = 12;
             label6.Text = "Description *";
             // 
             // txtDescription
             // 
             txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtDescription.Location = new Point(10, 144);
+            txtDescription.Location = new Point(11, 192);
+            txtDescription.Margin = new Padding(3, 4, 3, 4);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(587, 23);
+            txtDescription.Size = new Size(869, 27);
             txtDescription.TabIndex = 7;
+            txtDescription.TextChanged += cmbCategory_TextChanged;
+            txtDescription.Validated += cmbCategory_TextChanged;
             // 
             // cmbCity
             // 
@@ -247,58 +217,31 @@
             cmbCity.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbCity.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbCity.FormattingEnabled = true;
-            cmbCity.Location = new Point(432, 29);
+            cmbCity.Location = new Point(693, 39);
+            cmbCity.Margin = new Padding(3, 4, 3, 4);
             cmbCity.Name = "cmbCity";
-            cmbCity.Size = new Size(165, 23);
+            cmbCity.Size = new Size(188, 28);
             cmbCity.TabIndex = 5;
+            cmbCity.TextChanged += cmbCategory_TextChanged;
             // 
             // cmbSku
             // 
             cmbSku.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbSku.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbSku.FormattingEnabled = true;
-            cmbSku.Location = new Point(11, 86);
+            cmbSku.Location = new Point(13, 115);
+            cmbSku.Margin = new Padding(3, 4, 3, 4);
             cmbSku.Name = "cmbSku";
-            cmbSku.Size = new Size(164, 23);
+            cmbSku.Size = new Size(187, 28);
             cmbSku.TabIndex = 6;
-            // 
-            // btnClear
-            // 
-            btnClear.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClear.AutoSize = true;
-            btnClear.BackColor = Color.DarkOrange;
-            btnClear.FlatStyle = FlatStyle.Flat;
-            btnClear.ForeColor = Color.White;
-            btnClear.ImageIndex = 1;
-            btnClear.Location = new Point(927, 104);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(61, 27);
-            btnClear.TabIndex = 8;
-            btnClear.Text = "&Clear";
-            btnClear.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSearch.AutoSize = true;
-            btnSearch.BackColor = Color.Green;
-            btnSearch.FlatStyle = FlatStyle.Flat;
-            btnSearch.ForeColor = Color.White;
-            btnSearch.ImageIndex = 1;
-            btnSearch.Location = new Point(860, 104);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(61, 27);
-            btnSearch.TabIndex = 7;
-            btnSearch.Text = "&Search";
-            btnSearch.UseVisualStyleBackColor = false;
-            btnSearch.Visible = false;
+            cmbSku.TextChanged += cmbCategory_TextChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(11, 68);
+            label5.Location = new Point(13, 91);
             label5.Name = "label5";
-            label5.Size = new Size(36, 15);
+            label5.Size = new Size(46, 20);
             label5.TabIndex = 7;
             label5.Text = "SKU *";
             // 
@@ -306,18 +249,18 @@
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(432, 10);
+            label4.Location = new Point(693, 13);
             label4.Name = "label4";
-            label4.Size = new Size(36, 15);
+            label4.Size = new Size(44, 20);
             label4.TabIndex = 6;
             label4.Text = "City *";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(10, 10);
+            label3.Location = new Point(11, 13);
             label3.Name = "label3";
-            label3.Size = new Size(63, 15);
+            label3.Size = new Size(79, 20);
             label3.TabIndex = 5;
             label3.Text = "Category *";
             // 
@@ -326,112 +269,57 @@
             cmbCategory.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbCategory.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(10, 29);
+            cmbCategory.Location = new Point(11, 39);
+            cmbCategory.Margin = new Padding(3, 4, 3, 4);
             cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(164, 23);
+            cmbCategory.Size = new Size(187, 28);
             cmbCategory.TabIndex = 3;
-            // 
-            // btnExpand
-            // 
-            btnExpand.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnExpand.FlatStyle = FlatStyle.Flat;
-            btnExpand.ImageIndex = 1;
-            btnExpand.Location = new Point(950, 6);
-            btnExpand.Name = "btnExpand";
-            btnExpand.Size = new Size(38, 23);
-            btnExpand.TabIndex = 2;
-            btnExpand.UseVisualStyleBackColor = true;
+            cmbCategory.TextChanged += cmbCategory_TextChanged;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label11);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button5);
             panel1.Controls.Add(label14);
-            panel1.Controls.Add(button6);
-            panel1.Location = new Point(14, 232);
+            panel1.Location = new Point(16, 309);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(605, 50);
+            panel1.Size = new Size(890, 67);
             panel1.TabIndex = 6;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.ForeColor = Color.Gray;
-            label11.Location = new Point(8, 19);
+            label11.Location = new Point(9, 25);
             label11.Name = "label11";
-            label11.Size = new Size(268, 15);
+            label11.Size = new Size(336, 20);
             label11.TabIndex = 14;
             label11.Text = "Before defning the product you must frst create it";
-            // 
-            // button4
-            // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.AutoSize = true;
-            button4.BackColor = Color.DarkOrange;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.White;
-            button4.ImageIndex = 1;
-            button4.Location = new Point(1332, 104);
-            button4.Name = "button4";
-            button4.Size = new Size(61, 27);
-            button4.TabIndex = 8;
-            button4.Text = "&Clear";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button5.AutoSize = true;
-            button5.BackColor = Color.Green;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.White;
-            button5.ImageIndex = 1;
-            button5.Location = new Point(1265, 104);
-            button5.Name = "button5";
-            button5.Size = new Size(61, 27);
-            button5.TabIndex = 7;
-            button5.Text = "&Search";
-            button5.UseVisualStyleBackColor = false;
-            button5.Visible = false;
             // 
             // label14
             // 
             label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label14.AutoSize = true;
-            label14.Location = new Point(834, 39);
+            label14.Location = new Point(1152, 52);
             label14.Name = "label14";
-            label14.Size = new Size(28, 15);
+            label14.Size = new Size(34, 20);
             label14.TabIndex = 6;
             label14.Text = "City";
             // 
-            // button6
-            // 
-            button6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ImageIndex = 1;
-            button6.Location = new Point(1355, 6);
-            button6.Name = "button6";
-            button6.Size = new Size(38, 23);
-            button6.TabIndex = 2;
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // timerCLose
-            // 
-            timerCLose.Interval = 10;
-            // 
             // PrintedProductsAdd
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             Controls.Add(panel1);
             Controls.Add(pnMain);
             Controls.Add(pnHeader);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PrintedProductsAdd";
-            Size = new Size(637, 294);
+            Size = new Size(927, 392);
+            Load += PrintedProductsAdd_Load;
             pnHeader.ResumeLayout(false);
             pnHeader.PerformLayout();
             pnMain.ResumeLayout(false);
@@ -445,32 +333,23 @@
         private Panel pnHeader;
         private Label label1;
         private Button btnAdd;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnAddEdit;
         private Label lblBack;
         private Panel pnMain;
         private Label label6;
         private TextBox txtDescription;
         private ComboBox cmbCity;
         private ComboBox cmbSku;
-        private Button btnClear;
-        private Button btnSearch;
         private Label label5;
         private Label label4;
         private Label label3;
         private ComboBox cmbCategory;
-        private Button btnExpand;
         private Label label8;
-        private TextBox textBox1;
+        private TextBox txtShortDescription;
         private Label label9;
-        private TextBox textBox2;
+        private TextBox txtQuantity;
         private Panel panel1;
         private Label label11;
-        private Button button4;
-        private Button button5;
         private Label label14;
-        private Button button6;
-        private System.Windows.Forms.Timer timerCLose;
     }
 }

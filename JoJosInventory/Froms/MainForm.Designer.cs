@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            panel1 = new Panel();
+            pnTop = new Panel();
             btnUser = new Button();
             lblTitle = new Label();
             picMain = new PictureBox();
@@ -43,45 +43,46 @@
             btnDmp = new Button();
             imageList = new ImageList(components);
             flDamage = new FlowLayoutPanel();
-            panel2 = new Panel();
+            pnDPp = new Panel();
             btnDmPp = new Button();
-            panel4 = new Panel();
+            pnDBm = new Panel();
             btnDmBm = new Button();
-            panel3 = new Panel();
+            pnPp = new Panel();
             btnPpl = new Button();
-            panel5 = new Panel();
+            pnBm = new Panel();
             btnBaseMaterial = new Button();
-            panel6 = new Panel();
+            pnAu = new Panel();
             btnAdmin = new Button();
             timerSubMenuTransition = new System.Windows.Forms.Timer(components);
             timerMenuTransition = new System.Windows.Forms.Timer(components);
             pnMain = new Panel();
-            panel1.SuspendLayout();
+            pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picMain).BeginInit();
             flMenu.SuspendLayout();
             pnCo.SuspendLayout();
             pnMo.SuspendLayout();
             pnDmp.SuspendLayout();
             flDamage.SuspendLayout();
-            panel2.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
+            pnDPp.SuspendLayout();
+            pnDBm.SuspendLayout();
+            pnPp.SuspendLayout();
+            pnBm.SuspendLayout();
+            pnAu.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // pnTop
             // 
-            panel1.BackColor = Color.WhiteSmoke;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(btnUser);
-            panel1.Controls.Add(lblTitle);
-            panel1.Controls.Add(picMain);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(984, 33);
-            panel1.TabIndex = 0;
+            pnTop.BackColor = Color.WhiteSmoke;
+            pnTop.BorderStyle = BorderStyle.FixedSingle;
+            pnTop.Controls.Add(btnUser);
+            pnTop.Controls.Add(lblTitle);
+            pnTop.Controls.Add(picMain);
+            pnTop.Dock = DockStyle.Top;
+            pnTop.Location = new Point(0, 0);
+            pnTop.Margin = new Padding(3, 4, 3, 4);
+            pnTop.Name = "pnTop";
+            pnTop.Size = new Size(1125, 43);
+            pnTop.TabIndex = 0;
             // 
             // btnUser
             // 
@@ -89,9 +90,10 @@
             btnUser.AutoSize = true;
             btnUser.FlatAppearance.BorderSize = 0;
             btnUser.FlatStyle = FlatStyle.Flat;
-            btnUser.Location = new Point(896, 3);
+            btnUser.Location = new Point(1016, 0);
+            btnUser.Margin = new Padding(3, 4, 3, 4);
             btnUser.Name = "btnUser";
-            btnUser.Size = new Size(78, 27);
+            btnUser.Size = new Size(104, 40);
             btnUser.TabIndex = 3;
             btnUser.Text = "John Smith";
             btnUser.UseVisualStyleBackColor = true;
@@ -100,9 +102,9 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitle.Location = new Point(42, 9);
+            lblTitle.Location = new Point(48, 12);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(169, 15);
+            lblTitle.Size = new Size(215, 20);
             lblTitle.TabIndex = 2;
             lblTitle.Text = "Jojos Inventory Management";
             // 
@@ -110,7 +112,8 @@
             // 
             picMain.BackColor = Color.Transparent;
             picMain.Image = (Image)resources.GetObject("picMain.Image");
-            picMain.Location = new Point(9, 6);
+            picMain.Location = new Point(10, 8);
+            picMain.Margin = new Padding(3, 4, 3, 4);
             picMain.Name = "picMain";
             picMain.Size = new Size(24, 24);
             picMain.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -125,22 +128,25 @@
             flMenu.Controls.Add(pnMo);
             flMenu.Controls.Add(pnDmp);
             flMenu.Controls.Add(flDamage);
-            flMenu.Controls.Add(panel3);
-            flMenu.Controls.Add(panel5);
-            flMenu.Controls.Add(panel6);
+            flMenu.Controls.Add(pnPp);
+            flMenu.Controls.Add(pnBm);
+            flMenu.Controls.Add(pnAu);
             flMenu.Dock = DockStyle.Left;
-            flMenu.Location = new Point(0, 33);
+            flMenu.Location = new Point(0, 43);
+            flMenu.Margin = new Padding(3, 4, 3, 4);
             flMenu.Name = "flMenu";
-            flMenu.Size = new Size(232, 528);
+            flMenu.Size = new Size(265, 705);
             flMenu.TabIndex = 1;
             // 
             // pnCo
             // 
             pnCo.Controls.Add(btnCO);
-            pnCo.Location = new Point(3, 3);
+            pnCo.Location = new Point(3, 4);
+            pnCo.Margin = new Padding(3, 4, 3, 4);
             pnCo.Name = "pnCo";
-            pnCo.Size = new Size(230, 31);
+            pnCo.Size = new Size(263, 41);
             pnCo.TabIndex = 3;
+            pnCo.Tag = "Co";
             // 
             // btnCO
             // 
@@ -153,8 +159,9 @@
             btnCO.Image = (Image)resources.GetObject("btnCO.Image");
             btnCO.ImageAlign = ContentAlignment.MiddleLeft;
             btnCO.Location = new Point(0, 0);
+            btnCO.Margin = new Padding(3, 4, 3, 4);
             btnCO.Name = "btnCO";
-            btnCO.Size = new Size(230, 31);
+            btnCO.Size = new Size(263, 41);
             btnCO.TabIndex = 1;
             btnCO.Tag = "Co";
             btnCO.Text = "            Customer Orders";
@@ -165,10 +172,12 @@
             // pnMo
             // 
             pnMo.Controls.Add(bntMo);
-            pnMo.Location = new Point(3, 40);
+            pnMo.Location = new Point(3, 53);
+            pnMo.Margin = new Padding(3, 4, 3, 4);
             pnMo.Name = "pnMo";
-            pnMo.Size = new Size(230, 31);
+            pnMo.Size = new Size(263, 41);
             pnMo.TabIndex = 4;
+            pnMo.Tag = "Mo";
             // 
             // bntMo
             // 
@@ -181,8 +190,9 @@
             bntMo.Image = (Image)resources.GetObject("bntMo.Image");
             bntMo.ImageAlign = ContentAlignment.MiddleLeft;
             bntMo.Location = new Point(0, 0);
+            bntMo.Margin = new Padding(3, 4, 3, 4);
             bntMo.Name = "bntMo";
-            bntMo.Size = new Size(230, 31);
+            bntMo.Size = new Size(263, 41);
             bntMo.TabIndex = 1;
             bntMo.Tag = "Mo";
             bntMo.Text = "            Manufacturing Orders";
@@ -193,11 +203,12 @@
             // pnDmp
             // 
             pnDmp.Controls.Add(btnDmp);
-            pnDmp.Location = new Point(3, 77);
-            pnDmp.Margin = new Padding(3, 3, 3, 0);
+            pnDmp.Location = new Point(3, 102);
+            pnDmp.Margin = new Padding(3, 4, 3, 0);
             pnDmp.Name = "pnDmp";
-            pnDmp.Size = new Size(230, 31);
+            pnDmp.Size = new Size(263, 41);
             pnDmp.TabIndex = 6;
+            pnDmp.Tag = "Dm";
             // 
             // btnDmp
             // 
@@ -211,9 +222,9 @@
             btnDmp.ImageIndex = 2;
             btnDmp.ImageList = imageList;
             btnDmp.Location = new Point(0, 0);
-            btnDmp.Margin = new Padding(3, 0, 3, 3);
+            btnDmp.Margin = new Padding(3, 0, 3, 4);
             btnDmp.Name = "btnDmp";
-            btnDmp.Size = new Size(230, 31);
+            btnDmp.Size = new Size(263, 41);
             btnDmp.TabIndex = 2;
             btnDmp.Tag = "Dp";
             btnDmp.Text = "            Damaged and missing products";
@@ -235,22 +246,24 @@
             // flDamage
             // 
             flDamage.BackColor = Color.Gainsboro;
-            flDamage.Controls.Add(panel2);
-            flDamage.Controls.Add(panel4);
-            flDamage.Location = new Point(0, 108);
+            flDamage.Controls.Add(pnDPp);
+            flDamage.Controls.Add(pnDBm);
+            flDamage.Location = new Point(0, 143);
             flDamage.Margin = new Padding(0);
             flDamage.Name = "flDamage";
-            flDamage.Size = new Size(230, 74);
+            flDamage.Size = new Size(263, 99);
             flDamage.TabIndex = 4;
+            flDamage.Tag = "Dm";
+            flDamage.Paint += flDamage_Paint;
             // 
-            // panel2
+            // pnDPp
             // 
-            panel2.Controls.Add(btnDmPp);
-            panel2.Location = new Point(3, 0);
-            panel2.Margin = new Padding(3, 0, 0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(230, 31);
-            panel2.TabIndex = 7;
+            pnDPp.Controls.Add(btnDmPp);
+            pnDPp.Location = new Point(3, 0);
+            pnDPp.Margin = new Padding(3, 0, 0, 0);
+            pnDPp.Name = "pnDPp";
+            pnDPp.Size = new Size(263, 41);
+            pnDPp.TabIndex = 7;
             // 
             // btnDmPp
             // 
@@ -265,7 +278,7 @@
             btnDmPp.Location = new Point(0, 0);
             btnDmPp.Margin = new Padding(3, 0, 3, 0);
             btnDmPp.Name = "btnDmPp";
-            btnDmPp.Size = new Size(230, 31);
+            btnDmPp.Size = new Size(263, 41);
             btnDmPp.TabIndex = 2;
             btnDmPp.Tag = "DmPp";
             btnDmPp.Text = "            Printed Products";
@@ -273,13 +286,14 @@
             btnDmPp.UseVisualStyleBackColor = false;
             btnDmPp.Click += btnMenu_Click;
             // 
-            // panel4
+            // pnDBm
             // 
-            panel4.Controls.Add(btnDmBm);
-            panel4.Location = new Point(3, 34);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(230, 31);
-            panel4.TabIndex = 8;
+            pnDBm.Controls.Add(btnDmBm);
+            pnDBm.Location = new Point(3, 45);
+            pnDBm.Margin = new Padding(3, 4, 3, 4);
+            pnDBm.Name = "pnDBm";
+            pnDBm.Size = new Size(263, 41);
+            pnDBm.TabIndex = 8;
             // 
             // btnDmBm
             // 
@@ -294,7 +308,7 @@
             btnDmBm.Location = new Point(0, 0);
             btnDmBm.Margin = new Padding(3, 0, 3, 0);
             btnDmBm.Name = "btnDmBm";
-            btnDmBm.Size = new Size(230, 31);
+            btnDmBm.Size = new Size(263, 41);
             btnDmBm.TabIndex = 2;
             btnDmBm.Tag = "DmBm";
             btnDmBm.Text = "            Base Material";
@@ -302,13 +316,15 @@
             btnDmBm.UseVisualStyleBackColor = false;
             btnDmBm.Click += btnMenu_Click;
             // 
-            // panel3
+            // pnPp
             // 
-            panel3.Controls.Add(btnPpl);
-            panel3.Location = new Point(3, 185);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(230, 31);
-            panel3.TabIndex = 4;
+            pnPp.Controls.Add(btnPpl);
+            pnPp.Location = new Point(3, 246);
+            pnPp.Margin = new Padding(3, 4, 3, 4);
+            pnPp.Name = "pnPp";
+            pnPp.Size = new Size(263, 41);
+            pnPp.TabIndex = 4;
+            pnPp.Tag = "Pp";
             // 
             // btnPpl
             // 
@@ -321,8 +337,9 @@
             btnPpl.Image = (Image)resources.GetObject("btnPpl.Image");
             btnPpl.ImageAlign = ContentAlignment.MiddleLeft;
             btnPpl.Location = new Point(0, 0);
+            btnPpl.Margin = new Padding(3, 4, 3, 4);
             btnPpl.Name = "btnPpl";
-            btnPpl.Size = new Size(230, 31);
+            btnPpl.Size = new Size(263, 41);
             btnPpl.TabIndex = 1;
             btnPpl.Tag = "Pp";
             btnPpl.Text = "            Printed Product List";
@@ -330,13 +347,15 @@
             btnPpl.UseVisualStyleBackColor = false;
             btnPpl.Click += btnMenu_Click;
             // 
-            // panel5
+            // pnBm
             // 
-            panel5.Controls.Add(btnBaseMaterial);
-            panel5.Location = new Point(3, 222);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(230, 31);
-            panel5.TabIndex = 5;
+            pnBm.Controls.Add(btnBaseMaterial);
+            pnBm.Location = new Point(3, 295);
+            pnBm.Margin = new Padding(3, 4, 3, 4);
+            pnBm.Name = "pnBm";
+            pnBm.Size = new Size(263, 41);
+            pnBm.TabIndex = 5;
+            pnBm.Tag = "Bm";
             // 
             // btnBaseMaterial
             // 
@@ -349,8 +368,9 @@
             btnBaseMaterial.Image = (Image)resources.GetObject("btnBaseMaterial.Image");
             btnBaseMaterial.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaseMaterial.Location = new Point(0, 0);
+            btnBaseMaterial.Margin = new Padding(3, 4, 3, 4);
             btnBaseMaterial.Name = "btnBaseMaterial";
-            btnBaseMaterial.Size = new Size(230, 31);
+            btnBaseMaterial.Size = new Size(263, 41);
             btnBaseMaterial.TabIndex = 1;
             btnBaseMaterial.Tag = "Bm";
             btnBaseMaterial.Text = "            Base Material";
@@ -358,13 +378,15 @@
             btnBaseMaterial.UseVisualStyleBackColor = false;
             btnBaseMaterial.Click += btnMenu_Click;
             // 
-            // panel6
+            // pnAu
             // 
-            panel6.Controls.Add(btnAdmin);
-            panel6.Location = new Point(3, 259);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(230, 31);
-            panel6.TabIndex = 5;
+            pnAu.Controls.Add(btnAdmin);
+            pnAu.Location = new Point(3, 344);
+            pnAu.Margin = new Padding(3, 4, 3, 4);
+            pnAu.Name = "pnAu";
+            pnAu.Size = new Size(263, 41);
+            pnAu.TabIndex = 5;
+            pnAu.Tag = "Au";
             // 
             // btnAdmin
             // 
@@ -377,8 +399,9 @@
             btnAdmin.Image = (Image)resources.GetObject("btnAdmin.Image");
             btnAdmin.ImageAlign = ContentAlignment.MiddleLeft;
             btnAdmin.Location = new Point(0, 0);
+            btnAdmin.Margin = new Padding(3, 4, 3, 4);
             btnAdmin.Name = "btnAdmin";
-            btnAdmin.Size = new Size(230, 31);
+            btnAdmin.Size = new Size(263, 41);
             btnAdmin.TabIndex = 1;
             btnAdmin.Tag = "Au";
             btnAdmin.Text = "            Admin User";
@@ -400,44 +423,46 @@
             // 
             pnMain.BackColor = Color.IndianRed;
             pnMain.Dock = DockStyle.Fill;
-            pnMain.Location = new Point(232, 33);
+            pnMain.Location = new Point(265, 43);
+            pnMain.Margin = new Padding(3, 4, 3, 4);
             pnMain.Name = "pnMain";
-            pnMain.Size = new Size(752, 528);
+            pnMain.Size = new Size(860, 705);
             pnMain.TabIndex = 2;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(984, 561);
+            ClientSize = new Size(1125, 748);
             Controls.Add(pnMain);
             Controls.Add(flMenu);
-            Controls.Add(panel1);
+            Controls.Add(pnTop);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MinimumSize = new Size(1000, 600);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(1140, 784);
             Name = "MainForm";
             Text = "JIM";
             Load += MainForm_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnTop.ResumeLayout(false);
+            pnTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picMain).EndInit();
             flMenu.ResumeLayout(false);
             pnCo.ResumeLayout(false);
             pnMo.ResumeLayout(false);
             pnDmp.ResumeLayout(false);
             flDamage.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel6.ResumeLayout(false);
+            pnDPp.ResumeLayout(false);
+            pnDBm.ResumeLayout(false);
+            pnPp.ResumeLayout(false);
+            pnBm.ResumeLayout(false);
+            pnAu.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnTop;
         private PictureBox picMain;
         private Label lblTitle;
         private FlowLayoutPanel flMenu;
@@ -448,16 +473,16 @@
         private Button bntMo;
         private Panel pnDmp;
         private Button btnDmp;
-        private Panel panel2;
+        private Panel pnDPp;
         private Button btnDmPp;
-        private Panel panel4;
+        private Panel pnDBm;
         private Button btnDmBm;
         private Button btnUser;
-        private Panel panel3;
+        private Panel pnPp;
         private Button btnPpl;
-        private Panel panel5;
+        private Panel pnBm;
         private Button btnBaseMaterial;
-        private Panel panel6;
+        private Panel pnAu;
         private Button btnAdmin;
         private System.Windows.Forms.Timer timerSubMenuTransition;
         private ImageList imageList;

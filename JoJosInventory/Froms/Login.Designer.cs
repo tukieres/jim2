@@ -44,9 +44,10 @@
             btnLogin.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLogin.BackColor = Color.White;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Location = new Point(208, 181);
+            btnLogin.Location = new Point(229, 241);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(49, 27);
+            btnLogin.Size = new Size(58, 32);
             btnLogin.TabIndex = 3;
             btnLogin.Text = "&Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -56,18 +57,19 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(60, 75);
+            label1.Location = new Point(69, 100);
             label1.Name = "label1";
-            label1.Size = new Size(60, 15);
+            label1.Size = new Size(75, 20);
             label1.TabIndex = 1;
             label1.Text = "Username";
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(60, 93);
+            txtUserName.Location = new Point(69, 124);
+            txtUserName.Margin = new Padding(3, 4, 3, 4);
             txtUserName.Name = "txtUserName";
             txtUserName.PlaceholderText = "Username";
-            txtUserName.Size = new Size(391, 23);
+            txtUserName.Size = new Size(446, 27);
             txtUserName.TabIndex = 1;
             txtUserName.Text = "vlarha";
             txtUserName.TextChanged += txtUserName_TextChanged;
@@ -75,11 +77,12 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(60, 141);
+            txtPassword.Location = new Point(69, 188);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "Password";
-            txtPassword.Size = new Size(391, 23);
+            txtPassword.Size = new Size(446, 27);
             txtPassword.TabIndex = 2;
             txtPassword.Text = "654321";
             txtPassword.TextChanged += txtUserName_TextChanged;
@@ -89,9 +92,9 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(60, 123);
+            label2.Location = new Point(69, 164);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(70, 20);
             label2.TabIndex = 3;
             label2.Text = "Password";
             // 
@@ -101,9 +104,10 @@
             btnForgot.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnForgot.BackColor = Color.White;
             btnForgot.FlatStyle = FlatStyle.Flat;
-            btnForgot.Location = new Point(263, 181);
+            btnForgot.Location = new Point(292, 241);
+            btnForgot.Margin = new Padding(3, 4, 3, 4);
             btnForgot.Name = "btnForgot";
-            btnForgot.Size = new Size(127, 27);
+            btnForgot.Size = new Size(156, 32);
             btnForgot.TabIndex = 4;
             btnForgot.Text = "&Forgot my password";
             btnForgot.UseVisualStyleBackColor = false;
@@ -114,9 +118,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(101, 26);
+            label4.Location = new Point(115, 35);
             label4.Name = "label4";
-            label4.Size = new Size(320, 30);
+            label4.Size = new Size(398, 37);
             label4.TabIndex = 7;
             label4.Text = "JoJos Inventory Management";
             // 
@@ -126,9 +130,10 @@
             btnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnCancel.BackColor = Color.White;
             btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Location = new Point(396, 181);
+            btnCancel.Location = new Point(453, 241);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(55, 27);
+            btnCancel.Size = new Size(65, 32);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "&Cancel";
             btnCancel.UseVisualStyleBackColor = false;
@@ -136,10 +141,10 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(515, 240);
+            ClientSize = new Size(589, 320);
             Controls.Add(btnCancel);
             Controls.Add(label4);
             Controls.Add(btnForgot);
@@ -149,6 +154,7 @@
             Controls.Add(label1);
             Controls.Add(btnLogin);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

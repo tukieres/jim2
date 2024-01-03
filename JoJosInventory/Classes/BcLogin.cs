@@ -7,6 +7,7 @@ namespace JoJosInventory.Classes
         private static BcLogin instance = null;
         public string Username { get; set; }
         public string Email { get; set; }
+        public string ACLs { get; set; }
         DbSingleton myDb = DbSingleton.Instance;
 
         public bool SetNewPassword(string id, string password)

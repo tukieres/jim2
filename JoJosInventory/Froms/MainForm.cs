@@ -9,19 +9,17 @@ namespace JoJosInventory
         Boolean subMenuExpand = false;
         Boolean menuExpand = false;
         BcLogin login = BcLogin.Instance;
-        //BcRaw   Raw = BcRaw.Instance;
 
         private ToolTip toolTip1;
         Controls.BaseMaterial Bm = new Controls.BaseMaterial();
-        //Controls.PrintedProducts Pp = new Controls.PrintedProducts();
         Controls.PrintedProductsBase Pb = new Controls.PrintedProductsBase();
+        Controls.CustomerOrdersBase Co = new Controls.CustomerOrdersBase();
         public MainForm()
         {
             InitializeComponent();
             Bm.Dock = DockStyle.Fill;
-            //Pp.Dock = DockStyle.Fill;
             Pb.Dock = DockStyle.Fill;
-
+            Co.Dock = DockStyle.Fill;
 
             // Inicializar ToolTip
             toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -36,6 +34,15 @@ namespace JoJosInventory
             AddButtonsFromControl(flMenu);
             //toolTip1.SetToolTip(this.button2, "Texto para el botón 2");
             // Repite esta línea para cada botón o control
+
+            foreach (Control control in flMenu.Controls)
+            {
+                if (control is Panel)
+                {
+                    Panel pn = (Panel)control;
+                    pn.Visible = login.ACLs.Contains(pn.Tag.ToString());
+                }
+            }
         }
 
         private void AddButtonsFromControl(Control control)
@@ -62,7 +69,7 @@ namespace JoJosInventory
             if (subMenuExpand)
             {
                 flDamage.Height += 10;
-                if (flDamage.Height >= 64)
+                if (flDamage.Height >= 99)
                 {
                     timerSubMenuTransition.Stop();
                     subMenuExpand = false;
@@ -172,6 +179,9 @@ namespace JoJosInventory
                 case "Pp":
                     pnMain.Controls.Add(Pb);
                     break;
+                case "Co":
+                    pnMain.Controls.Add(Co);
+                    break;
 
                 default:
                     //pnMain.Controls.Add(Bm);
@@ -185,6 +195,11 @@ namespace JoJosInventory
             {
                 pnMain.Controls.Remove(control);
             }
+        }
+
+        private void flDamage_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

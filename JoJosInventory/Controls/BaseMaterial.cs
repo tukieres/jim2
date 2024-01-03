@@ -2,6 +2,7 @@
 using System.Data;
 using JoJosInventory.Data;
 using JoJosInventory.Froms;
+using System.Security.Claims;
 
 namespace JoJosInventory.Controls
 {
@@ -21,6 +22,14 @@ namespace JoJosInventory.Controls
             searchFilters();
             cmbCategory.DataSource = lookup.RawCategories;
             cmbSku.DataSource = lookup.RawSku;
+            lookup.event_UpdateLookUp += lookup_events_Lookup;
+        }
+        private void lookup_events_Lookup(object sender, EventArgs e)
+        {
+            cmbCategory.DataSource = lookup.RawCategories;
+            cmbSku.DataSource = lookup.RawSku;
+            cmbSku.Text = "";
+            cmbCategory.Text = "";
         }
 
         private void Formatdgv()
@@ -76,14 +85,14 @@ namespace JoJosInventory.Controls
         {
             if (expanded)
             {
-                pnSearch.Height = 38;
+                pnSearch.Height = 49;
                 expanded = false;
                 btnExpand.ImageIndex = 1;
 
             }
             else
             {
-                pnSearch.Height = 120;
+                pnSearch.Height = 172;
                 expanded = true;
                 btnExpand.ImageIndex = 0;
             }
@@ -127,7 +136,7 @@ namespace JoJosInventory.Controls
                 dgv.Columns["CurrentAmount"].Width = width / 7;
                 dgv.Columns["AmountLocked"].Width = width / 7;
                 dgv.Columns["QtyAvailable"].Width = width / 7;
-                dgv.Columns["Edit"].Width = width / 12;
+                dgv.Columns["Edit"].Width = width / 13;
             }
         }
 

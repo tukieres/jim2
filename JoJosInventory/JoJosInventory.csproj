@@ -13,12 +13,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Controls\CustomerOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Controls\PrintedProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Controls\PrintedProductsEdit.cs">
+    <Compile Update="Controls\CustomerOrdersBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Controls\PrintedProductsEdit.cs" />
     <Compile Update="Froms\ModalEditBaseMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
